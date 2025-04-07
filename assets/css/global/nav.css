@@ -1,0 +1,89 @@
+header{
+    background-color: rgb(22, 19, 19);
+    box-shadow: 0 1.5px 10px #3f3f3f;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.7rem 0rem 0.7rem 0rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.navbar-list{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-block: 16px;
+}
+.navbar-list ul{
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+}
+.nav-item{
+    margin: 0 15px;
+    padding-left: 0rem;
+    justify-content: center;
+}
+.nav-social-midia{
+    display: flex;
+    padding-right: 2.5rem;
+    justify-content:center;
+}
+.nav-social-midia ul{
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+.nav-logo{
+    margin: 0 15px;
+}
+.nav-logo a{
+    padding-block:  16px 16px 16px 16px;
+}
+.hamburguer{
+    display: none;
+    border: none;
+    background: none;
+    border-top: 3px  solid #f3f1f0;
+    cursor: pointer;
+    padding: 0px; 
+}
+.hamburguer::before,
+.hamburguer::after{
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #f3f1f0;
+    margin-top: 5px;
+}
+@media (max-width:975px){
+    .hamburguer{
+        display: block;
+        margin-left: 10%;
+    }    
+
+    .navbar-list{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        gap: 17vh;
+        background: rgb(22, 19, 19);
+        clip-path:circle(100px at 90% -20%);
+        transition: 1s ease-out;
+
+
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        pointer-events: none;
+    }
+    .nav.active .navbar-list{
+        clip-path: (1500px at 90% -15%);
+        pointer-events: all;
+    }
+    
+}
