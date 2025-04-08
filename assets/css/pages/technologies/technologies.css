@@ -1,11 +1,12 @@
 .technologies-photos{
     display: flex;
-    gap: 1.5rem;
+    gap: 6rem;
+    flex-wrap: wrap;
 }
 .technologies-photos li{
-    width: 1000px;
-    height: 100px;
-    padding-top: 50px;
+    width: 45px;
+    height: 45px;
+    padding-block: 10px;
 }
 .title{
     padding-left: 2rem;

@@ -12,7 +12,7 @@ body{
     font-optical-sizing: auto;
     font-weight: Bold;
 }
-.learn-more{
+.learn-more, .submit{
     color: #f3f1f0; 
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
