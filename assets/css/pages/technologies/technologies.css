@@ -1,0 +1,12 @@
+.technologies-photos{
+    display: flex;
+    gap: 1.5rem;
+}
+.technologies-photos li{
+    width: 1000px;
+    height: 100px;
+    padding-top: 50px;
+}
+.title{
+    padding-left: 2rem;
+}
