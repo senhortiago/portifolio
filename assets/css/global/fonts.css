@@ -10,6 +10,14 @@ body{
 .title{
     font-family:"Montserrat", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 61px;
-    font-style: Bold;
+    font-weight: Bold;
+}
+.learn-more{
+    color: #f3f1f0; 
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 20px;
+    
 }

@@ -1,0 +1,40 @@
+.intro-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0px;
+}
+.tiago-photo{
+    width: 400px;
+    height: 400px;
+    padding: 5rem 3rem 0rem 0rem ;
+}
+.title-primary{
+    font-size: 64px;
+}
+.into-text{
+    width: 800px;
+    padding-left: 5%;
+}
+.apresentation{
+    width: 700px;
+    text-align: justify;
+
+}
+.button{
+    justify-items: center;
+    justify-content: center;
+    padding-left:200px;
+}
+.learn-more{
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    background: #c1729d;
+    width: 250px;
+    height: 50px;
+    border-radius: 100px;
+}
+.learn-more:hover{
+    background: #cf7aa9;
+}
