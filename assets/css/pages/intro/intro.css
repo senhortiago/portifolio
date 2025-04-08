@@ -3,11 +3,13 @@
     justify-content: space-between;
     align-items: center;
     padding-top: 0px;
+    flex-wrap: wrap;
 }
 .tiago-photo{
     width: 400px;
     height: 400px;
     padding: 5rem 3rem 0rem 0rem ;
+    align-items: center;
 }
 .title-primary{
     font-size: 64px;
