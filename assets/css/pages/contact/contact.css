@@ -24,7 +24,7 @@ input{
     background: #c1729d;
     color: aliceblue;
     cursor: pointer;
-    margin-left: 80px;
+    margin-left: 12px;
 }
 .submit:hover{
     background: #cf7aa9;
@@ -38,21 +38,24 @@ input{
 }
 @media (max-width:425px){
     form{
-        width: 300px;
+        width: 150px;
     }
     input{
-        width: 200px;
+        width: 150px;
     }
     .contact-section{
-        width: 200px;
+        width: 150px;
     }
     .contact-form{
-        width: 200px;
+        width: 150px;
     }
     label{
-        width: 200px;
+        width: 150px;
     }
     input{
-        width: 200px;
+        width: 150px;
+    }
+    .copywirite{
+        font-size: 12px;
     }
 }

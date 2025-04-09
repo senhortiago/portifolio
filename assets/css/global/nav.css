@@ -88,5 +88,16 @@ nav{
     }
     .nav-logo{
         display: none;
-}
+    
+    }
+    .nav-social-midia{
+        display: none;
+    }
+    nav{
+        justify-content: left;
+    }
+    .projects-section{
+        width: 200px;
+    }
+
 }
