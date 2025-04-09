@@ -39,18 +39,23 @@
 .learn-more:hover{
     background: #cf7aa9;
 }
-.div-photo{
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    align-content: center;
-}
 @media (max-width:425px){
     .title-primary{
         font-size: 32px;
     }
     .tiago-photo{
+        padding-top: 10px;
         height: 200px;
         width: 200px;
+    }
+    .intro-section{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .into-text{
+        padding-left: 0;
+    }
+    .button{
+        padding-left: 0;
     }
 }
