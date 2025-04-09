@@ -7,6 +7,7 @@ form{
     gap: 0.5rem;
     padding-left: 2rem;
     align-items: left;
+    width: 400px;
 }
 input{
     border: none;
@@ -30,4 +31,8 @@ input{
 }
 .footer{
     justify-items: center;
+}
+#message{
+    height: 100px;
+    
 }
