@@ -33,7 +33,11 @@ input{
     justify-items: center;
 }
 #message{
+    display: flex;
     height: 100px;
+    width: 182px;
+    padding-left: 0;
+    
 
 }
 @media (max-width:425px){
