@@ -8,8 +8,8 @@
 .tiago-photo{
     width: 300px;
     height: 300px;
-    padding: 5rem 3rem 0rem 0rem ;
     align-items: center;
+    justify-content: center;
 }
 .title-primary{
     font-size: 64px;
@@ -38,4 +38,15 @@
 }
 .learn-more:hover{
     background: #cf7aa9;
+}
+.div-photo{
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+@media (max-width:425px){
+    .title-primary{
+        font-size: 32px;
+    }
 }

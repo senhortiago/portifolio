@@ -34,5 +34,25 @@ input{
 }
 #message{
     height: 100px;
-    
+
+}
+@media (max-width:425px){
+    form{
+        width: 300px;
+    }
+    input{
+        width: 200px;
+    }
+    .contact-section{
+        width: 200px;
+    }
+    .contact-form{
+        width: 200px;
+    }
+    label{
+        width: 200px;
+    }
+    input{
+        width: 200px;
+    }
 }
