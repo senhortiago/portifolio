@@ -43,6 +43,8 @@
 }
 @media (max-width:425px){
     .intro-section{
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         justify-items: center;
@@ -52,11 +54,8 @@
     }
     .tiago-photo{
         margin: 10px;
-    }
-    .intro-section{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        width: 250px;
+        height: 250px;
     }
     .into-text{
         padding-left: 0;

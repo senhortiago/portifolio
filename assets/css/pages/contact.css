@@ -23,7 +23,7 @@ input{
     border: none;
     border-radius: 20px;
     height: 30px;
-    width: 300px;
+    width: 280px;
     background: #c1729d;
     color: aliceblue;
     cursor: pointer;
@@ -37,7 +37,7 @@ input{
 .message{
     display: flex;
     height: 100px;
-    width: 300px;
+    width: 280px;
     padding-left: 0;
     resize: none;
     border-radius: 20px;
@@ -45,7 +45,7 @@ input{
 @media (max-width:425px){
 
     input{
-        width: 300px;
+        width: 280px;
     }
     .contact-section{
         width: 150px;
