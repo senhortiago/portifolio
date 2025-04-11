@@ -47,24 +47,27 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        justify-items: center;
     }
     .title-primary{
         font-size: 32px;
     }
     .tiago-photo{
         margin: 10px;
-        width: 250px;
-        height: 250px;
+        width: 180px;
+        height: 180px;
     }
     .into-text{
-        padding-left: 0;
-    }
-    .button{
-        margin-left: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .intro-section p{
         font-weight: 400;
         font-size: 18px;
+    }
+    .ble{
+        justify-content: center;
+        align-items: center;
     }
 }
