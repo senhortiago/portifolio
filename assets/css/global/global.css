@@ -1,9 +1,5 @@
-html{
-    width: 100%;
-}
 body{
-    margin: 0;
-    padding: 0;
+
     background-color: #111011;
     width: 100%;
     height: 100%;
@@ -11,4 +7,11 @@ body{
 li{
     list-style-type: none;
 }
-
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.title{
+    margin-left: 2rem;
+}

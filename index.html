@@ -4,49 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tiago Barcelos | Dev</title>
-    <link rel="stylesheet" href="assets/css/pages/index/styles.css">
-    <script defer src="assets/js/pages/index/app.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="app.js"></script>
 </head>
 <body>
     <div class="conteiner">
         <header>
             <nav class="nav">
-                <div class="navbar-list">
-                    <ul class="navbar-list">
-                        <li class="nav-item">Home</li>
-                        <li class="nav-item">Technologies</li>
-                        <li class="nav-item">Contact</li>
-                        <li class="nav-item">Projects</li>
+                <div class="nav-list">
+                    <ul>
+                        <li class="nav-item active"><a href="#home">Home</a></li>
+                        <li class="nav-item"><a href="#technologies">Technologies</a></li>
+                        <li class="nav-item"><a href="#contact">Contact</a></li>
+                        <li class="nav-item"><a href="#projects">Projects</a></li>
+                    </ul>
+                </div>
+                <div class="nav-icons">
+                    <ul>
+                        <li class="nav-logo" data-tilt><a href="https://www.linkedin.com/in/tiago-barcelos/" target="_blank"><img src="assets/images/global/nav-icon/linkedin.png" alt="Linkedln"></a></li>
+                        <li class="nav-logo" data-tilt><a href="https://github.com/senhortiago" target="_blank"><img src="assets/images/global/nav-icon/github (1).png" alt="GitHub"></a></li>
+                        <li class="nav-logo" data-tilt><a href="https://www.instagram.com/tiago_lbarcelos/" target="_blank"><img src="assets/images/global/nav-icon/instagram.png" alt="instagram"></a></li>
+                        <li class="nav-logo" data-tilt><a href="https://www.youtube.com/@tiagobarcelosdev" target="_blank"><img src="assets/images/global/nav-icon/youtube (1).png" alt="youtube"></a></li>
                     </ul>
                 </div>
 
-                    <button class="hamburguer"></button>
-                
-                <div class="nav-social-midia">
-                    <ul>
-                        <li class="nav-logo" data-tilt><a href="https://www.linkedin.com/in/tiago-barcelos/"><img src="assets/images/global/nav-icon/linkedin.png" alt="Linkedln"></a></li>
-                        <li class="nav-logo" data-tilt><a href="https://github.com/senhortiago"><img src="assets/images/global/nav-icon/github (1).png" alt="GitHub"></a></li>
-                        <li class="nav-logo" data-tilt><a href="https://www.instagram.com/tiago_lbarcelos/"><img src="assets/images/global/nav-icon/instagram.png" alt="instagram"></a></li>
-                        <li class="nav-logo" data-tilt><a href="https://www.youtube.com/@tiagobarcelosdev"><img src="assets/images/global/nav-icon/youtube (1).png" alt="youtube"></a></li>
+                <button class="menu-btn" id="menu-btn" onclick="openMenu()"><img src="assets/images/global/nav-icon/menu2.svg" alt="" id="btn-icon"></button>
+
+                <div class="mobile-menu">
+                    <ul class="mobile-nav-list">
+                        <li class="nav-item"><a href="#home">Home</a></li>
+                        <li class="nav-item"><a href="#technologies">Technologies</a></li>
+                        <li class="nav-item"><a href="#contact">Contact</a></li>
+                        <li class="nav-item"><a href="#projects">Projects</a></li>
                     </ul>
                 </div>
+
             </nav>
         </header>
-        <section class="intro-section">
+        <section class="intro-section" id="home">
             <div class="into-text">
                 <h1 class="title-primary">Hi! I'm Tiago Barcelos 👋</h1>
-                <p class="apresentation">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus soluta totam perferendis, ullam delectus rem, quos voluptatibus temporibus recusandae consectetur placeat rerum? Molestias eum sunt voluptates assumenda amet saepe reiciendis.</p>
-                <div class="button" data-tilt>
-                <button class="learn-more" data-tilt data-tilt-speed="400">
-                    Learn More
-                </button>
+                <p class="apresentation">I'm a Computer Systems student at UFF and a Physics graduate from UFRJ, seeking new adventures in the world of programming. Currently, I'm diving deep into technologies like Java, Spring Boot, Python, JavaScript, HTML, CSS, and SQL. My curiosity and passion for problem-solving drive me to explore creative solutions and continuously grow as a developer</p>
+                <div class="button">
+                    <button class="learn-more">
+                        Learn More
+                    </button>
                 </div>
-            </div class="div-photo">
-                <div class="intro-photo" data-tilt>
+            </div>
+            <div class="intro-photo">
                 <img src="assets/images/index/foto-perfil-site.png" alt="foto Tiago Barcelos" class="tiago-photo">
             </div>
         </section>
-        <section class="technologies-section">
+        <section class="technologies-section" id="technologies">
             <h2 class="title">Technologies</h2>
             <ul class="technologies-photos">
                 <li> <img src="https://skillicons.dev/icons?i=java"/></li>
@@ -62,7 +71,7 @@
 
             </ul>
         </section>
-        <section class="projects-section">
+        <section class="projects-section" id="projects">
             <h2 class="title">Projects</h2>
             <ul>
                 <li>e-commerce simplify</li>
@@ -71,7 +80,7 @@
                 <li>rats site</li>
             </ul>
         </section>
-        <section class="contact-section">
+        <section class="contact-section" id="contact">
             <div class="form-header">
                 <h2 class="title">Contact</h1>
                 <p class="form-text">For more info fill the form</p>
@@ -84,15 +93,16 @@
                 <label for="phone">Phone Number:</label>
                 <input name="phone" type="tel" id="phone" placeholder="Your Phone Number">
                 <label for="message">Message:</label>
-                <input name="message" type="text" id="message">
-                
+                <textarea name="message" id="message" class="message"></textarea>
+
                 <button type="submit" id="submit" class="submit" data-tilt>Submit</button>
+
+
             </form>
         </section>
         <footer class="footer">
             <h3 class="copywirite"> Created By Tiago Barcelos &copy;</h3>
         </footer> 
     </div>
-    <script src="assets/js/pages/index/vanilla-tilt.js"></script>
 </body>
 </html>

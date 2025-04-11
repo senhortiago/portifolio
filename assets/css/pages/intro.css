@@ -3,11 +3,12 @@
     justify-content: space-between;
     align-items: center;
     padding-top: 0px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 .tiago-photo{
-    width: 300px;
-    height: 300px;
+    margin: 20px 40px 0 0;
+    width: 400px;
+    height: 400px;
     align-items: center;
     justify-content: center;
 }
@@ -15,17 +16,18 @@
     font-size: 64px;
 }
 .into-text{
-    width: 60%;
+    width: 80%;
     padding-left: 5%;
 }
 .apresentation{
     text-align: justify;
+    width: 80%;
 
 }
 .button{
+    margin-top: 10px;
     justify-items: center;
     justify-content: center;
-    padding-left:20%;
 }
 .learn-more{
     border: none;
@@ -40,22 +42,30 @@
     background: #cf7aa9;
 }
 @media (max-width:425px){
+    .intro-section{
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+    }
     .title-primary{
         font-size: 32px;
     }
     .tiago-photo{
-        padding-top: 10px;
-        height: 200px;
-        width: 200px;
+        margin: 10px;
     }
     .intro-section{
         flex-direction: column;
         justify-content: center;
+        align-items: center;
     }
     .into-text{
         padding-left: 0;
     }
     .button{
-        padding-left: 0;
+        margin-left: 60px;
+    }
+    .intro-section p{
+        font-weight: 400;
+        font-size: 18px;
     }
 }

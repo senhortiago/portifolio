@@ -2,17 +2,16 @@
     display: flex;
     gap: 6rem;
     flex-wrap: wrap;
+    margin: 32px;
+    
 }
 .technologies-photos li{
     width: 45px;
-    height: 45px;
-    padding-block: 10px;
-}
-.title{
-    padding-left: 2rem;
+    height: 45px;    
 }
 @media (max-width:975px){
     .technologies-photos{
         gap: 3rem;
+        margin: 32px 16px 16px 32px;
     }
 }
