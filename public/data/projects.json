@@ -1,0 +1,70 @@
+{
+  "projects": [
+    {
+      "id": "simplify-commerce",
+      "title": "Simplify Commerce",
+      "summary": "API de e-commerce com catálogo, carrinho e checkout.",
+      "description": "Back-end de uma loja virtual com cadastro de produtos, carrinho persistente, cálculo de frete e checkout com pagamentos simulados. Arquitetura em camadas, testes de integração e documentação OpenAPI.",
+      "year": 2025,
+      "role": "Back-end",
+      "tags": ["Java", "Spring Boot", "PostgreSQL", "Docker"],
+      "links": { "repository": "https://github.com/senhortiago", "demo": null },
+      "cover": { "from": "#2F6BD1", "to": "#77A8BE" }
+    },
+    {
+      "id": "simplify-bank",
+      "title": "Simplify Bank",
+      "summary": "Banco digital simplificado com transferências e extrato.",
+      "description": "Sistema bancário com contas, transferências entre usuários, validação por serviço autorizador externo e notificações assíncronas. Foco em regras de negócio, transações e segurança com Spring Security.",
+      "year": 2025,
+      "role": "Full stack",
+      "tags": ["Java", "Spring Security", "JWT", "MySQL"],
+      "links": { "repository": "https://github.com/senhortiago", "demo": null },
+      "cover": { "from": "#30231E", "to": "#6F605A" }
+    },
+    {
+      "id": "orbital-lab",
+      "title": "Orbital Lab",
+      "summary": "Simulador de mecânica orbital com visualização interativa.",
+      "description": "Simulações numéricas de órbitas e sistemas de muitos corpos usando integradores de Verlet e Runge-Kutta, com gráficos interativos. A ponte entre a Física e o código.",
+      "year": 2024,
+      "role": "Pesquisa & Dev",
+      "tags": ["Python", "NumPy", "Matplotlib"],
+      "links": { "repository": "https://github.com/senhortiago", "demo": null },
+      "cover": { "from": "#E9CB55", "to": "#F6DD7A" }
+    },
+    {
+      "id": "arduino-sense",
+      "title": "Arduino Sense",
+      "summary": "Monitoramento de sensores em tempo real com Arduino.",
+      "description": "Coleta de dados de sensores com Arduino, envio via serial/MQTT e painel para análise em tempo real. Projeto derivado do TCC, unindo instrumentação física e software.",
+      "year": 2023,
+      "role": "Hardware & Software",
+      "tags": ["Arduino", "C++", "MQTT", "Python"],
+      "links": { "repository": "https://github.com/senhortiago", "demo": null },
+      "cover": { "from": "#3E8E41", "to": "#A7C957" }
+    },
+    {
+      "id": "pulse-dashboard",
+      "title": "Pulse Dashboard",
+      "summary": "Painel de métricas reativo com Angular Signals.",
+      "description": "Dashboard com gráficos, filtros e atualização em tempo real, construído com Angular standalone, Signals e Tailwind. Validação de payloads com Zod e estados de erro elegantes.",
+      "year": 2026,
+      "role": "Front-end",
+      "tags": ["Angular", "TypeScript", "Tailwind", "Zod"],
+      "links": { "repository": "https://github.com/senhortiago", "demo": null },
+      "cover": { "from": "#C2410C", "to": "#F6DD7A" }
+    },
+    {
+      "id": "rats-site",
+      "title": "Rats Site",
+      "summary": "Site institucional responsivo para uma comunidade.",
+      "description": "Site institucional com layout responsivo, animações leves e formulário de contato. Primeiro projeto publicado para um cliente real, com foco em performance e acessibilidade.",
+      "year": 2023,
+      "role": "Front-end",
+      "tags": ["HTML", "CSS", "JavaScript"],
+      "links": { "repository": "https://github.com/senhortiago", "demo": null },
+      "cover": { "from": "#1E1714", "to": "#2F6BD1" }
+    }
+  ]
+}

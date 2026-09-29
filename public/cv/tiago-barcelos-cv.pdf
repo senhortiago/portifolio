@@ -1,0 +1,52 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+6 0 obj
+<< /Length 1220 >>
+stream
+BT /F2 26 Tf 56 770 Td (Tiago Barcelos) Tj ET
+BT /F1 12 Tf 56 748 Td (Desenvolvedor de Software  |  Rio de Janeiro, RJ) Tj ET
+BT /F1 10 Tf 56 722 Td (CURRICULO MODELO - substitua este arquivo por public/cv/tiago-barcelos-cv.pdf) Tj ET
+BT /F2 13 Tf 56 684 Td (Resumo) Tj ET
+BT /F1 11 Tf 56 664 Td (Bacharel em Fisica \(UFRJ\) e estudante de Sistemas de Computacao \(UFF\).) Tj ET
+BT /F1 11 Tf 56 648 Td (Foco em back-end com Java e Spring Boot, e front-end com Angular e TypeScript.) Tj ET
+BT /F2 13 Tf 56 612 Td (Formacao) Tj ET
+BT /F1 11 Tf 56 592 Td (- Sistemas de Computacao - Universidade Federal Fluminense \(UFF\) - em andamento) Tj ET
+BT /F1 11 Tf 56 576 Td (- Bacharelado em Fisica - Universidade Federal do Rio de Janeiro \(UFRJ\)) Tj ET
+BT /F2 13 Tf 56 540 Td (Experiencia) Tj ET
+BT /F1 11 Tf 56 520 Td (- [Cargo] - [Empresa] - [Periodo]) Tj ET
+BT /F1 11 Tf 56 504 Td (- [Cargo] - [Empresa] - [Periodo]) Tj ET
+BT /F2 13 Tf 56 468 Td (Tecnologias) Tj ET
+BT /F1 11 Tf 56 448 Td (Java, Spring Boot, Python, JavaScript, TypeScript, Angular, HTML, CSS, SQL, Git) Tj ET
+BT /F2 13 Tf 56 412 Td (Idiomas) Tj ET
+BT /F1 11 Tf 56 392 Td (Portugues \(nativo\), Ingles \([nivel]\)) Tj ET
+0.91 0.80 0.33 rg 56 735 120 3 re f
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000251 00000 n 
+0000000321 00000 n 
+0000000396 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+1668
+%%EOF
