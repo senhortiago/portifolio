@@ -9,14 +9,14 @@ export const layoutLinesConfig: LayoutLinesConfig = {
   left: {
     pending: intro,
     converge: `left-gutter-start ${settled}`,
-    reveal: `left-gutter-start ${settled}`,
-    done: `left-gutter-start ${settled}`,
+    reveal: `left-[10%] ${settled}`,
+    done: `left-[10%] ${settled}`,
   },
   right: {
     pending: intro,
     converge: `left-[calc(100%-theme(spacing.gutter-end))] ${settled}`,
-    reveal: `left-[calc(100%-theme(spacing.gutter-end))] ${settled}`,
-    done: `left-[calc(100%-theme(spacing.gutter-end))] ${settled}`,
+    reveal: `left-[calc(90%-1px)] ${settled}`,
+    done: `left-[calc(90%-1px)] ${settled}`,
   },
   transition:
     'transition-[left,opacity,background-color] [transition-duration:1200ms,2000ms,2000ms] ease-intro',
