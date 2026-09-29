@@ -24,7 +24,7 @@ export const aboutConfig: AboutConfig = {
   statValue: 'text-5xl font-bold tracking-[-0.04em] text-brand-ink md:text-6xl',
   statLabel: 'text-sm leading-snug text-brand-ink-soft',
   marquee:
-    'relative mt-20 overflow-hidden border-y border-brand-ink/10 py-5 [mask-image:linear-gradient(to_right,transparent,#000_10%,#000_90%,transparent)] md:mt-28',
+    'relative mt-20 overflow-hidden border-y border-brand-ink/10 py-5 [mask-image:linear-gradient(to_right,transparent,#000_10%,#000_90%,transparent)] md:mx-[10%] md:mt-28',
   marqueeTrack: 'flex w-max animate-marquee items-center',
   marqueeList: 'flex items-center gap-10 pr-10',
   marqueeItem: 'inline-flex items-center gap-10 whitespace-nowrap font-mono text-lg text-brand-ink md:text-2xl',
