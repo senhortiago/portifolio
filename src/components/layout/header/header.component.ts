@@ -31,7 +31,7 @@ import { HeaderTone } from './header.types';
     <header [class]="barClasses()">
       <div [class]="config.brandGroup">
         <a routerLink="/" [class]="config.logo + ' ' + tone().logo" [attr.aria-label]="config.logoAriaLabel" (click)="closeMenu()">
-          <span [class]="config.logoMark" aria-hidden="true">TB</span>
+          <img [src]="config.logoSrc" alt="" [class]="config.logoMark" width="36" height="36" aria-hidden="true" />
           <span>{{ brand.fullName }}</span>
         </a>
         <span [class]="config.status + ' ' + tone().status">

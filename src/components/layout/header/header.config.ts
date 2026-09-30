@@ -12,8 +12,8 @@ export const headerConfig: HeaderConfig = {
     'fixed inset-x-0 top-0 z-header flex items-center justify-between gap-4 px-4 py-4 transition-[opacity,transform] duration-500 ease-out md:px-8',
   brandGroup: 'flex items-center gap-4',
   logo: 'group inline-flex items-center gap-2 rounded-full text-[0.95rem] font-semibold tracking-tight transition-colors duration-500',
-  logoMark:
-    'grid h-9 w-9 place-items-center rounded-full bg-brand-ink font-mono text-xs font-medium text-brand-accent ring-1 ring-white/10 transition-transform duration-300 group-hover:rotate-[-8deg]',
+  logoMark: 'h-9 w-9 select-none object-contain transition-transform duration-300 group-hover:rotate-[-8deg]',
+  logoSrc: 'logo.png',
   status:
     'hidden items-center gap-2 rounded-full border px-3 py-1.5 text-xs font-medium backdrop-blur-md transition-colors duration-500 lg:inline-flex',
   statusDot: 'relative flex h-2 w-2',

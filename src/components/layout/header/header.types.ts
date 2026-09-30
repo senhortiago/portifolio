@@ -23,6 +23,7 @@ export interface HeaderConfig {
   brandGroup: string;
   logo: string;
   logoMark: string;
+  logoSrc: string;
   status: string;
   statusDot: string;
   statusPulse: string;
