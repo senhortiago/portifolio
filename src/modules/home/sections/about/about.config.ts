@@ -36,19 +36,19 @@ export const aboutConfig: AboutConfig = {
 
   texts: {
     label: 'Sobre mim',
-    statement: 'Formado em Física pela UFRJ, hoje construo software',
-    statementMuted: 'onde lógica, dados e boas experiências se encontram.',
+    statement: 'Sou desenvolvedor focado em construir aplicações eficientes e',
+    statementMuted: 'escaláveis para entregar  soluções que geram impacto',
     rotatingPrefix: 'Meu foco:',
     bio: [
       'Sou estudante de Sistemas de Computação na UFF e trago da Física o hábito de modelar problemas antes de resolvê-los. Gosto de entender o porquê das coisas — e isso aparece no código.',
-      'Trabalho principalmente com Java e Spring Boot no back-end, e Angular com TypeScript no front-end. Curiosidade e vontade de resolver problemas me movem a aprender algo novo a cada projeto.',
+      'Trabalho principalmente com Java, Spring Boot e Python no back-end, e Angular com TypeScript no front-end. Curiosidade e vontade de resolver problemas me movem a aprender algo novo a cada projeto.',
     ],
     stackLabel: 'Tecnologias',
   },
   rotatingTerms: ['APIs robustas', 'interfaces fluidas', 'código limpo', 'sistemas escaláveis'],
   traits: ['Curioso', 'Analítico', 'Resiliente', 'Construtor', 'Colaborativo'],
   stats: [
-    { value: '02', label: 'formações acadêmicas: Física (UFRJ) e Sistemas de Computação (UFF)' },
+    { value: '02', label: 'formações acadêmicas: Sistemas de Computação (UFF) eFísica (UFRJ)' },
     { value: '10+', label: 'tecnologias no dia a dia, do back ao front' },
     { value: '06', label: 'projetos em destaque neste portfólio' },
     { value: '∞', label: 'curiosidade para aprender o próximo desafio' },
