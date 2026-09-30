@@ -100,9 +100,9 @@ export const heroConfig: HeroConfig = {
 
   slides: [
     { lines: ['Oi, eu sou o'], highlight: 'Tiago Barcelos.' },
-    { lines: ['Desenvolvo', 'software com'], highlight: 'precisão.' },
-    { lines: ['Da física', 'direto para o'], highlight: 'código.' },
-    { lines: ['Java, Spring', 'e Angular com'], highlight: 'propósito.' },
+    { lines: ['Desenvolvo', 'software para'], highlight: 'problemas reais' },
+    { lines: ['Transformo problemas', 'complexos em'], highlight: 'soluções simples.' },
+    { lines: ['Java, Spring,', 'e Python com'], highlight: 'resultados' },
   ],
   loopsPerSlide: 2,
   timerSlideMs: 8000,
