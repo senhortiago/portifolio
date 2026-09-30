@@ -37,7 +37,7 @@ export const aboutConfig: AboutConfig = {
   texts: {
     label: 'Sobre mim',
     statement: 'Sou desenvolvedor focado em construir aplicações eficientes e',
-    statementMuted: 'escaláveis para entregar  soluções que geram impacto',
+    statementMuted: 'escaláveis para entregar  soluções que geram impacto.',
     rotatingPrefix: 'Meu foco:',
     bio: [
       'Sou estudante de Sistemas de Computação na UFF e trago da Física o hábito de modelar problemas antes de resolvê-los. Gosto de entender o porquê das coisas — e isso aparece no código.',
