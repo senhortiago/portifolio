@@ -1,70 +1,215 @@
 {
   "projects": [
     {
-      "id": "simplify-commerce",
-      "title": "Simplify Commerce",
-      "summary": "API de e-commerce com catálogo, carrinho e checkout.",
-      "description": "Back-end de uma loja virtual com cadastro de produtos, carrinho persistente, cálculo de frete e checkout com pagamentos simulados. Arquitetura em camadas, testes de integração e documentação OpenAPI.",
-      "year": 2025,
-      "role": "Back-end",
-      "tags": ["Java", "Spring Boot", "PostgreSQL", "Docker"],
-      "links": { "repository": "https://github.com/senhortiago", "demo": null },
-      "cover": { "from": "#2F6BD1", "to": "#77A8BE" }
+      "id": "gov-risk",
+      "title": "Gov Risk",
+      "summary": "Pipeline ETL e painel de risco com dados públicos coletados.",
+      "description": "Plataforma em duas partes: um ETL que coleta, limpa e consolida dados públicos de governo, e um front-end que apresenta os indicadores de risco de forma visual e navegável. Repositório privado.",
+      "year": 2026,
+      "role": "Full stack & Dados",
+      "tags": [
+        "ETL",
+        "Python",
+        "Front-end",
+        "Dados"
+      ],
+      "links": {
+        "repository": "https://github.com/senhortiago",
+        "demo": null
+      },
+      "cover": {
+        "from": "#1F3A5F",
+        "to": "#4F86C6"
+      }
     },
     {
-      "id": "simplify-bank",
-      "title": "Simplify Bank",
-      "summary": "Banco digital simplificado com transferências e extrato.",
-      "description": "Sistema bancário com contas, transferências entre usuários, validação por serviço autorizador externo e notificações assíncronas. Foco em regras de negócio, transações e segurança com Spring Security.",
-      "year": 2025,
-      "role": "Full stack",
-      "tags": ["Java", "Spring Security", "JWT", "MySQL"],
-      "links": { "repository": "https://github.com/senhortiago", "demo": null },
-      "cover": { "from": "#30231E", "to": "#6F605A" }
+      "id": "blub",
+      "title": "Blub",
+      "summary": "App mobile de gestão financeira pessoal.",
+      "description": "Aplicativo com contas, cartões de crédito, parcelamentos, transações, relatórios com gráficos e backup de dados, em temas claro e escuro. Feito com React Native e Expo.",
+      "year": 2026,
+      "role": "Mobile",
+      "tags": [
+        "React Native",
+        "Expo",
+        "TypeScript"
+      ],
+      "links": {
+        "repository": "https://github.com/senhortiago/blub-app",
+        "demo": null
+      },
+      "cover": {
+        "from": "#6D3FD1",
+        "to": "#A77BF0"
+      }
     },
     {
-      "id": "orbital-lab",
-      "title": "Orbital Lab",
-      "summary": "Simulador de mecânica orbital com visualização interativa.",
-      "description": "Simulações numéricas de órbitas e sistemas de muitos corpos usando integradores de Verlet e Runge-Kutta, com gráficos interativos. A ponte entre a Física e o código.",
-      "year": 2024,
-      "role": "Pesquisa & Dev",
-      "tags": ["Python", "NumPy", "Matplotlib"],
-      "links": { "repository": "https://github.com/senhortiago", "demo": null },
-      "cover": { "from": "#E9CB55", "to": "#F6DD7A" }
-    },
-    {
-      "id": "arduino-sense",
-      "title": "Arduino Sense",
-      "summary": "Monitoramento de sensores em tempo real com Arduino.",
-      "description": "Coleta de dados de sensores com Arduino, envio via serial/MQTT e painel para análise em tempo real. Projeto derivado do TCC, unindo instrumentação física e software.",
-      "year": 2023,
-      "role": "Hardware & Software",
-      "tags": ["Arduino", "C++", "MQTT", "Python"],
-      "links": { "repository": "https://github.com/senhortiago", "demo": null },
-      "cover": { "from": "#3E8E41", "to": "#A7C957" }
-    },
-    {
-      "id": "pulse-dashboard",
-      "title": "Pulse Dashboard",
-      "summary": "Painel de métricas reativo com Angular Signals.",
-      "description": "Dashboard com gráficos, filtros e atualização em tempo real, construído com Angular standalone, Signals e Tailwind. Validação de payloads com Zod e estados de erro elegantes.",
+      "id": "runeterra-index",
+      "title": "Runeterra Index",
+      "summary": "Explorador de campeões de League of Legends.",
+      "description": "Aplicação web com dados em tempo real da API Data Dragon da Riot: busca com debounce, filtro alfabético, modal com lore, habilidades e skins, e skeleton loading.",
       "year": 2026,
       "role": "Front-end",
-      "tags": ["Angular", "TypeScript", "Tailwind", "Zod"],
-      "links": { "repository": "https://github.com/senhortiago", "demo": null },
-      "cover": { "from": "#C2410C", "to": "#F6DD7A" }
+      "tags": [
+        "JavaScript",
+        "API REST",
+        "CSS"
+      ],
+      "links": {
+        "repository": "https://github.com/senhortiago/runetera-index",
+        "demo": null
+      },
+      "cover": {
+        "from": "#0F2B4A",
+        "to": "#C8A24A"
+      }
     },
     {
-      "id": "rats-site",
-      "title": "Rats Site",
-      "summary": "Site institucional responsivo para uma comunidade.",
-      "description": "Site institucional com layout responsivo, animações leves e formulário de contato. Primeiro projeto publicado para um cliente real, com foco em performance e acessibilidade.",
-      "year": 2023,
+      "id": "gdd-forge",
+      "title": "GDD Forge",
+      "summary": "Gerador de Game Design Documents com IA.",
+      "description": "App desktop que usa Google Gemini e a base da IGDB para gerar GDDs completos a partir de referências reais, com exportação em PDF, interface glassmorphism e arquitetura modular testada.",
+      "year": 2026,
+      "role": "Desktop & IA",
+      "tags": [
+        "Python",
+        "PySide6",
+        "Gemini",
+        "IGDB"
+      ],
+      "links": {
+        "repository": "https://github.com/senhortiago/Gerador-de-GDD-com-IA",
+        "demo": null
+      },
+      "cover": {
+        "from": "#7A1424",
+        "to": "#E0405A"
+      }
+    },
+    {
+      "id": "elo",
+      "title": "Elo",
+      "summary": "Plano de leitura bíblica anual.",
+      "description": "Aplicação web para acompanhar uma leitura bíblica ao longo do ano, com progresso diário e interface simples e acolhedora.",
+      "year": 2026,
       "role": "Front-end",
-      "tags": ["HTML", "CSS", "JavaScript"],
-      "links": { "repository": "https://github.com/senhortiago", "demo": null },
-      "cover": { "from": "#1E1714", "to": "#2F6BD1" }
+      "tags": [
+        "React",
+        "Vite",
+        "JavaScript"
+      ],
+      "links": {
+        "repository": "https://github.com/senhortiago/Elo",
+        "demo": "https://elo-sand.vercel.app"
+      },
+      "cover": {
+        "from": "#2E6B5A",
+        "to": "#8CC7A8"
+      }
+    },
+    {
+      "id": "agenda-viva",
+      "title": "Agenda Viva",
+      "summary": "Gerenciador de eventos e calendário em Java.",
+      "description": "Sistema para cadastrar, organizar e consultar eventos em um calendário, construído em Java com foco em orientação a objetos.",
+      "year": 2025,
+      "role": "Back-end",
+      "tags": [
+        "Java",
+        "POO"
+      ],
+      "links": {
+        "repository": "https://github.com/senhortiago/manager-events-calendar",
+        "demo": null
+      },
+      "cover": {
+        "from": "#30231E",
+        "to": "#6F605A"
+      }
+    },
+    {
+      "id": "portfolio",
+      "title": "Portfólio",
+      "summary": "Este site: meu portfólio pessoal.",
+      "description": "Portfólio construído com Angular, Tailwind e foco em animação, acessibilidade e performance.",
+      "year": 2025,
+      "role": "Design & Front-end",
+      "tags": [
+        "Angular",
+        "Tailwind",
+        "TypeScript"
+      ],
+      "links": {
+        "repository": "https://github.com/senhortiago/portifolio",
+        "demo": "https://portifolio-blush-six-15.vercel.app"
+      },
+      "cover": {
+        "from": "#2F6BD1",
+        "to": "#77A8BE"
+      }
+    },
+    {
+      "id": "pay-wallet",
+      "title": "Pay Wallet",
+      "summary": "Carteira digital simplificada — desafio back-end PicPay.",
+      "description": "API de carteira digital com transferências entre usuários, validação por serviço autorizador e regras de negócio transacionais, resolvendo o desafio back-end do PicPay.",
+      "year": 2025,
+      "role": "Back-end",
+      "tags": [
+        "Java",
+        "Spring Boot",
+        "API REST"
+      ],
+      "links": {
+        "repository": "https://github.com/senhortiago/carteira_digital_simplificada",
+        "demo": null
+      },
+      "cover": {
+        "from": "#11804A",
+        "to": "#5FD59A"
+      }
+    },
+    {
+      "id": "queda-livre",
+      "title": "Queda Acelerada",
+      "summary": "Código do meu TCC sobre movimento acelerado.",
+      "description": "Estudo de um movimento acelerado de um sistema físico, com o código de coleta e análise desenvolvido para o trabalho de conclusão de curso.",
+      "year": 2025,
+      "role": "Pesquisa & Dev",
+      "tags": [
+        "Física",
+        "Arduino",
+        "Análise de dados"
+      ],
+      "links": {
+        "repository": "https://github.com/senhortiago/tcc_queda_acelerada",
+        "demo": null
+      },
+      "cover": {
+        "from": "#E9CB55",
+        "to": "#F6DD7A"
+      }
+    },
+    {
+      "id": "calc-one",
+      "title": "Calc One",
+      "summary": "Calculadora web em JavaScript.",
+      "description": "Uma das minhas primeiras aplicações: calculadora funcional feita com HTML, CSS e JavaScript puro.",
+      "year": 2022,
+      "role": "Front-end",
+      "tags": [
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
+      "links": {
+        "repository": "https://github.com/senhortiago/calculadora",
+        "demo": null
+      },
+      "cover": {
+        "from": "#3B3B4F",
+        "to": "#8A8AA8"
+      }
     }
   ]
 }
