@@ -87,67 +87,58 @@ export const journeyConfig: JourneyConfig = {
 
   entries: [
     {
-      year: 2017,
-      title: 'Primeiro dia na Física',
-      summary: 'Entrei no bacharelado em Física da UFRJ. Cálculo, laboratório e noites tentando entender o universo.',
+      year: 2015,
+      title: 'O chamado',
+      summary: 'Na equipe de robótica da Faetec, ainda no ensino médio, escrevi minha primeira linha de código.',
       story:
-        'A Física me ensinou a fazer boas perguntas antes de buscar respostas. Modelar um problema, testar hipóteses e aceitar quando o experimento contraria a teoria — essa base virou meu jeito de pensar software.',
+        'Um robô parado na bancada e um LED que se recusava a piscar. Quando finalmente acendeu, algo acendeu junto em mim: a descoberta de que algumas linhas de texto podiam dar vida a uma máquina. Eu ainda não sabia, mas ali começava a minha jornada.',
+      handle: '@faetec',
+      marks: ['⚙', '>_'],
+    },
+    {
+      year: 2019,
+      title: 'Rumo ao desconhecido',
+      summary: 'Entrei na faculdade de Física atrás das perguntas mais fundamentais do universo.',
+      story:
+        'Cálculo, laboratório e noites tentando entender como tudo funciona. A Física me ensinou a fazer boas perguntas antes de buscar respostas, a modelar problemas e a aceitar quando o experimento contraria a teoria. O código ficou em segundo plano, mas nunca foi embora.',
       handle: '@ufrj',
       marks: ['Φ', 'UF'],
     },
     {
-      year: 2019,
-      title: 'A primeira linha de código',
-      summary: 'Python apareceu para simular experimentos. Foi amor à primeira execução.',
+      year: 2021,
+      title: 'O reencontro',
+      summary: 'Voltei ao código e entendi, de vez, que era isso que eu queria fazer.',
       story:
-        'Precisava tratar dados de laboratório e resolver equações que não fechavam no papel. Um script virou dez, os gráficos ficaram bonitos e percebi que programar era a ferramenta mais poderosa que eu já tinha usado.',
+        'Precisava tratar dados e resolver equações que não fechavam no papel. Um script virou dez, e a parte favorita de cada trabalho passou a ser a hora de programar. Foi o reencontro com aquele garoto da robótica, e desta vez com a certeza de que eu não queria mais me afastar.',
       handle: '@python',
-      marks: ['Py', '>_'],
+      marks: ['Py', '{}'],
     },
     {
-      year: 2021,
-      title: 'Arduino no TCC',
-      summary: 'Sensores, protoboards e um TCC que uniu hardware, física e software.',
+      year: 2024,
+      title: 'A grande prova',
+      summary: 'Um TCC com Arduino que uniu física, hardware e programação.',
       story:
-        'No trabalho de conclusão de curso, construí um sistema de aquisição de dados com Arduino. Foi a primeira vez que vi código mexendo no mundo físico — e o momento em que a computação deixou de ser hobby.',
+        'Sensores, protoboards e muitas horas de depuração. No trabalho de conclusão de curso, construí um sistema com Arduino e vi, de novo, o código mexendo no mundo físico. Foi a prova de que as duas metades da minha história se encaixavam.',
       handle: '@arduino',
       marks: ['∞', 'C'],
     },
     {
-      year: 2022,
-      title: 'Físico formado',
-      summary: 'Diploma na mão e uma certeza: eu queria construir coisas com código.',
-      story:
-        'Terminar a graduação trouxe clareza. A parte favorita de cada projeto sempre tinha sido o código, então decidi seguir por esse caminho de forma séria e estruturada.',
-      handle: '@ufrj',
-      marks: ['Φ', '✓'],
-    },
-    {
-      year: 2023,
-      title: 'Rumo à computação',
-      summary: 'Comecei Sistemas de Computação na UFF para transformar paixão em profissão.',
-      story:
-        'Estruturas de dados, bancos, redes e engenharia de software. A faculdade organizou o que eu aprendia sozinho e abriu portas para projetos maiores e mais bem arquitetados.',
-      handle: '@uff',
-      marks: ['UF', '{}'],
-    },
-    {
       year: 2025,
-      title: 'Projetos full stack',
-      summary: 'Java, Spring Boot e Angular em projetos completos, do banco de dados à interface.',
+      title: 'Renascimento',
+      summary: 'Físico formado e um novo começo: a computação, agora como caminho principal.',
       story:
-        'APIs REST, autenticação, testes e front-ends reativos. Cada projeto me ensinou a pensar no sistema inteiro — performance, segurança e, principalmente, a experiência de quem usa.',
-      handle: '@spring',
-      marks: ['Jv', 'Ng'],
+        'Diploma na mão, fechei um ciclo e abri outro. Comecei a estudar computação de forma séria e estruturada: estruturas de dados, bancos, redes e engenharia de software. Tudo o que eu aprendia sozinho ganhou forma, e a paixão começou a virar profissão.',
+      handle: '@uff',
+      marks: ['Φ', '→'],
     },
     {
       year: 2026,
-      title: 'A jornada continua',
-      summary: 'Portfólio novo, desafios novos. O melhor ainda está por vir.',
+      title: 'O retorno com o elixir',
+      summary: 'Projetos reais e produtos que resolvem problemas de verdade.',
       story:
-        'Sigo estudando, construindo e buscando times onde eu possa contribuir e crescer. Mesma curiosidade de sempre, ferramentas novas — e muita vontade de fazer acontecer.',
+        'Hoje eu construo para pessoas: APIs, interfaces e produtos completos que nascem de problemas reais. Cada projeto junta tudo o que a jornada me deu, a curiosidade da robótica, o rigor da Física e o ofício da computação. E o melhor ainda está por vir.',
       handle: '@tiago',
-      marks: ['TB', '→'],
+      marks: ['TB', '✓'],
     },
   ],
 };
