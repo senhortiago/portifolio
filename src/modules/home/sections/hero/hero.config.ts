@@ -69,6 +69,8 @@ export const heroConfig: HeroConfig = {
     in: 'translate-y-0 opacity-100 transition-[opacity,transform] duration-400 ease-in',
   },
   titleLine: 'block w-fit whitespace-nowrap text-display font-bold text-brand-ink',
+  compactText:
+    '!text-[clamp(1.85rem,8.6vw,3.6rem)] !leading-[0.95] md:!text-[clamp(3rem,5.4vw,6rem)]',
   highlightWrap: 'relative block w-fit whitespace-nowrap text-display font-bold text-brand-ink',
   highlightMarker: {
     out: 'absolute -inset-x-[0.06em] bottom-[0.04em] h-[0.4em] origin-left scale-x-0 rounded-[0.08em] bg-brand-accent transition-transform duration-300 ease-out',
@@ -101,7 +103,7 @@ export const heroConfig: HeroConfig = {
   slides: [
     { lines: ['Oi, eu sou o'], highlight: 'Tiago Barcelos.' },
     { lines: ['Desenvolvo', 'software para'], highlight: 'problemas reais' },
-    { lines: ['Transformo problemas', 'complexos em'], highlight: 'soluções simples.' },
+    { lines: ['Transformo', 'problemas', 'complexos em'], highlight: 'soluções simples.', compact: true },
     { lines: ['Java, Spring,', 'e Python com'], highlight: 'resultados' },
   ],
   loopsPerSlide: 2,

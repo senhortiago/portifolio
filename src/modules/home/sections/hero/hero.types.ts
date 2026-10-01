@@ -3,6 +3,7 @@ import { IntroPhase } from '../../../../core/services/intro-animation/intro-anim
 export interface HeroSlide {
   lines: string[];
   highlight: string;
+  compact?: boolean;
 }
 
 export type HeroPointerZone = 'prev' | 'next' | 'down';
@@ -48,6 +49,7 @@ export interface HeroConfig {
   headline: string;
   headlineSwap: Record<'out' | 'in', string>;
   titleLine: string;
+  compactText: string;
   highlightWrap: string;
   highlightMarker: Record<'out' | 'in', string>;
   highlightText: string;

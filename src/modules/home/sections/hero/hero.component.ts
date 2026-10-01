@@ -95,9 +95,9 @@ import { HeroAutoAdvance, HeroLineStyle, HeroPointerZone } from './hero.types';
           <p [class]="config.headline" aria-hidden="true">
             <span [class]="swapping() ? config.headlineSwap.out : config.headlineSwap.in">
               @for (line of slide().lines; track $index) {
-                <span [class]="config.titleLine">{{ line }}</span>
+                <span [class]="slide().compact ? config.titleLine + ' ' + config.compactText : config.titleLine">{{ line }}</span>
               }
-              <span [class]="config.highlightWrap">
+              <span [class]="slide().compact ? config.highlightWrap + ' ' + config.compactText : config.highlightWrap">
                 <span [class]="swapping() ? config.highlightMarker.out : config.highlightMarker.in"></span>
                 <span [class]="config.highlightText">{{ slide().highlight }}</span>
               </span>
