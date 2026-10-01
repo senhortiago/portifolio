@@ -28,8 +28,14 @@ export const linksConstant = {
     {
       id: 'youtube',
       label: 'YouTube',
-      handle: '@tiagobarcelosdev',
-      url: 'https://www.youtube.com/@tiagobarcelosdev',
+      handle: '@tiagophydev',
+      url: 'https://www.youtube.com/@tiagophydev',
+    },
+    {
+      id: 'email',
+      label: 'Email',
+      handle: '@TiagoBarcelos',
+      url: 'mailto:tiagolealbarcelos@gmail.com',
     },
   ] satisfies SocialLink[],
   resume: {
