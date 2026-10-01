@@ -16,7 +16,7 @@ export class CountUpDirective {
   private rafId = 0;
 
   constructor() {
-    inject(DestroyRef).onDestroy(() => cancelAnimationFrame(this.rafId));
+    inject(DestroyRef).onDestroy(() => this.cancel());
 
     effect(() => {
       const target = this.appCountUp();
@@ -29,7 +29,7 @@ export class CountUpDirective {
   }
 
   private animate(target: number): void {
-    cancelAnimationFrame(this.rafId);
+    this.cancel();
     const duration = this.countUpDuration();
     const startedAt = performance.now();
 
@@ -42,6 +42,14 @@ export class CountUpDirective {
       }
     };
     this.rafId = requestAnimationFrame(step);
+  }
+
+  /** Só há frame agendado no browser: no SSR `cancelAnimationFrame` nem existe. */
+  private cancel(): void {
+    if (this.rafId) {
+      cancelAnimationFrame(this.rafId);
+      this.rafId = 0;
+    }
   }
 
   private write(value: number): void {

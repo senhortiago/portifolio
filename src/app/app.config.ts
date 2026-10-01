@@ -1,5 +1,6 @@
 import { provideHttpClient, withFetch, withInterceptors } from '@angular/common/http';
 import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+import { provideClientHydration } from '@angular/platform-browser';
 import { provideRouter, withInMemoryScrolling, withRouterConfig } from '@angular/router';
 import { httpCacheInterceptor } from '../core/interceptors/http-cache.interceptor';
 import { httpResilienceInterceptor } from '../core/interceptors/http-resilience.interceptor';
@@ -16,5 +17,8 @@ export const appConfig: ApplicationConfig = {
       withRouterConfig({ onSameUrlNavigation: 'reload' }),
     ),
     provideHttpClient(withFetch(), withInterceptors([httpCacheInterceptor, httpResilienceInterceptor])),
+    // Reaproveita o HTML pré-renderizado no build (SEO). Sem `withEventReplay`: ele injeta
+    // um <script> inline que a CSP (script-src 'self') bloquearia.
+    provideClientHydration(),
   ],
 };

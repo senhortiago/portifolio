@@ -7,7 +7,7 @@ Angular 19 (standalone + Signals), Tailwind CSS, Zod e Lenis.
 ```bash
 npm install
 npm start          # http://localhost:4200
-npm run build      # saída em dist/portfolio/browser
+npm run build      # saída em dist/portfolio/browser (index.html pré-renderizado para SEO)
 ```
 
 ## Onde trocar o conteúdo
@@ -23,6 +23,10 @@ npm run build      # saída em dist/portfolio/browser
 | Frases do hero | `src/modules/home/sections/hero/hero.config.ts` |
 | Paleta de cores (Design Tokens) | `tailwind.config.js` |
 | Ligar/desligar recursos | `src/core/constants/feature-flags.constant.ts` |
+| SEO global (domínio, palavras-chave, JSON-LD, Search Console) | `src/core/constants/seo.constant.ts` |
+| Title e description da Home | `src/modules/home/home.config.ts` |
+| Imagem de compartilhamento (1200×630) | `public/og-image.png` |
+| Rastreamento (atualize se mudar o domínio) | `public/robots.txt` e `public/sitemap.xml` |
 
 Se trocar o vídeo e a cor do fundo verde mudar, ajuste `keyColor` em
 `src/components/elements/chroma-video/chroma-video.config.ts`.

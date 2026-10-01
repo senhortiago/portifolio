@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { SeoService } from '../../core/services/seo/seo.service';
 import { homeConfig } from './home.config';
 import { AboutComponent } from './sections/about/about.component';
 import { ContactComponent } from './sections/contact/contact.component';
@@ -29,4 +30,8 @@ import { ProjectsComponent } from './sections/projects/projects.component';
 })
 export class HomeComponent {
   protected readonly config = homeConfig;
+
+  constructor() {
+    inject(SeoService).apply(this.config.seo);
+  }
 }

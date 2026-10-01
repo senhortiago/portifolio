@@ -150,6 +150,10 @@ export class ChromaVideoComponent {
   }
 
   private stopLoop(): void {
+    // Sem frame agendado (ex: SSR, onde `cancelAnimationFrame` nem existe), não há o que cancelar.
+    if (!this.rafId) {
+      return;
+    }
     cancelAnimationFrame(this.rafId);
     this.rafId = 0;
   }
@@ -295,6 +299,10 @@ export class ChromaVideoComponent {
   }
 
   private teardown(): void {
+    // `viewReady` só vira true no browser: no SSR o <video> não tem API de mídia.
+    if (!this.viewReady) {
+      return;
+    }
     this.stopLoop();
     const video = this.videoRef()?.nativeElement;
     video?.pause();
