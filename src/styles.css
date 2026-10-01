@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply bg-brand-bg text-brand-ink antialiased;
+    scrollbar-color: rgba(75, 62, 57, 0.3) transparent;
+  }
+
+  body {
+    @apply min-h-screen overflow-x-clip bg-brand-bg font-sans;
+  }
+
+  ::selection {
+    @apply bg-brand-accent text-brand-ink;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-brand-secondary ring-offset-2 ring-offset-brand-bg;
+  }
+
+  /* Lenis — CSS obrigatório do motor de scroll */
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+
+  .lenis:not(.lenis-autoToggle).lenis-stopped {
+    overflow: clip;
+  }
+
+  .lenis [data-lenis-prevent],
+  .lenis [data-lenis-prevent-wheel],
+  .lenis [data-lenis-prevent-touch] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-smooth iframe {
+    pointer-events: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: theme('colors.brand-bg');
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: theme('colors.brand-ink');
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: theme('colors.brand-ink');
+  }
+
+  ::-webkit-scrollbar-button {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+}
+

@@ -1,0 +1,215 @@
+{
+  "projects": [
+    {
+      "id": "gov-risk",
+      "title": "Gov Risk",
+      "summary": "Pipeline ETL e painel de risco com dados públicos coletados.",
+      "description": "Plataforma em duas partes: um ETL que coleta, limpa e consolida dados públicos de governo, e um front-end que apresenta os indicadores de risco de forma visual e navegável. Repositório privado.",
+      "year": 2026,
+      "role": "Full stack & Dados",
+      "tags": [
+        "ETL",
+        "Python",
+        "Front-end",
+        "Dados"
+      ],
+      "links": {
+        "repository": "https://github.com/senhortiago",
+        "demo": null
+      },
+      "cover": {
+        "from": "#1F3A5F",
+        "to": "#4F86C6"
+      }
+    },
+    {
+      "id": "blub",
+      "title": "Blub",
+      "summary": "App mobile de gestão financeira pessoal.",
+      "description": "Aplicativo com contas, cartões de crédito, parcelamentos, transações, relatórios com gráficos e backup de dados, em temas claro e escuro. Feito com React Native e Expo.",
+      "year": 2026,
+      "role": "Mobile",
+      "tags": [
+        "React Native",
+        "Expo",
+        "TypeScript"
+      ],
+      "links": {
+        "repository": "https://github.com/senhortiago/blub-app",
+        "demo": null
+      },
+      "cover": {
+        "from": "#6D3FD1",
+        "to": "#A77BF0"
+      }
+    },
+    {
+      "id": "runeterra-index",
+      "title": "Runeterra Index",
+      "summary": "Explorador de campeões de League of Legends.",
+      "description": "Aplicação web com dados em tempo real da API Data Dragon da Riot: busca com debounce, filtro alfabético, modal com lore, habilidades e skins, e skeleton loading.",
+      "year": 2026,
+      "role": "Front-end",
+      "tags": [
+        "JavaScript",
+        "API REST",
+        "CSS"
+      ],
+      "links": {
+        "repository": "https://github.com/senhortiago/runetera-index",
+        "demo": null
+      },
+      "cover": {
+        "from": "#0F2B4A",
+        "to": "#C8A24A"
+      }
+    },
+    {
+      "id": "gdd-forge",
+      "title": "GDD Forge",
+      "summary": "Gerador de Game Design Documents com IA.",
+      "description": "App desktop que usa Google Gemini e a base da IGDB para gerar GDDs completos a partir de referências reais, com exportação em PDF, interface glassmorphism e arquitetura modular testada.",
+      "year": 2026,
+      "role": "Desktop & IA",
+      "tags": [
+        "Python",
+        "PySide6",
+        "Gemini",
+        "IGDB"
+      ],
+      "links": {
+        "repository": "https://github.com/senhortiago/Gerador-de-GDD-com-IA",
+        "demo": null
+      },
+      "cover": {
+        "from": "#7A1424",
+        "to": "#E0405A"
+      }
+    },
+    {
+      "id": "elo",
+      "title": "Elo",
+      "summary": "Plano de leitura bíblica anual.",
+      "description": "Aplicação web para acompanhar uma leitura bíblica ao longo do ano, com progresso diário e interface simples e acolhedora.",
+      "year": 2026,
+      "role": "Front-end",
+      "tags": [
+        "React",
+        "Vite",
+        "JavaScript"
+      ],
+      "links": {
+        "repository": "https://github.com/senhortiago/Elo",
+        "demo": "https://elo-sand.vercel.app"
+      },
+      "cover": {
+        "from": "#2E6B5A",
+        "to": "#8CC7A8"
+      }
+    },
+    {
+      "id": "agenda-viva",
+      "title": "Agenda Viva",
+      "summary": "Gerenciador de eventos e calendário em Java.",
+      "description": "Sistema para cadastrar, organizar e consultar eventos em um calendário, construído em Java com foco em orientação a objetos.",
+      "year": 2025,
+      "role": "Back-end",
+      "tags": [
+        "Java",
+        "POO"
+      ],
+      "links": {
+        "repository": "https://github.com/senhortiago/manager-events-calendar",
+        "demo": null
+      },
+      "cover": {
+        "from": "#30231E",
+        "to": "#6F605A"
+      }
+    },
+    {
+      "id": "portfolio",
+      "title": "Portfólio",
+      "summary": "Este site: meu portfólio pessoal.",
+      "description": "Portfólio construído com Angular, Tailwind e foco em animação, acessibilidade e performance.",
+      "year": 2025,
+      "role": "Design & Front-end",
+      "tags": [
+        "Angular",
+        "Tailwind",
+        "TypeScript"
+      ],
+      "links": {
+        "repository": "https://github.com/senhortiago/portifolio",
+        "demo": "https://devleal.tech"
+      },
+      "cover": {
+        "from": "#2F6BD1",
+        "to": "#77A8BE"
+      }
+    },
+    {
+      "id": "pay-wallet",
+      "title": "Pay Wallet",
+      "summary": "Carteira digital simplificada — desafio back-end PicPay.",
+      "description": "API de carteira digital com transferências entre usuários, validação por serviço autorizador e regras de negócio transacionais, resolvendo o desafio back-end do PicPay.",
+      "year": 2025,
+      "role": "Back-end",
+      "tags": [
+        "Java",
+        "Spring Boot",
+        "API REST"
+      ],
+      "links": {
+        "repository": "https://github.com/senhortiago/carteira_digital_simplificada",
+        "demo": null
+      },
+      "cover": {
+        "from": "#11804A",
+        "to": "#5FD59A"
+      }
+    },
+    {
+      "id": "queda-livre",
+      "title": "Queda Acelerada",
+      "summary": "Código do meu TCC sobre movimento acelerado.",
+      "description": "Estudo de um movimento acelerado de um sistema físico, com o código de coleta e análise desenvolvido para o trabalho de conclusão de curso.",
+      "year": 2025,
+      "role": "Pesquisa & Dev",
+      "tags": [
+        "Física",
+        "Arduino",
+        "Análise de dados"
+      ],
+      "links": {
+        "repository": "https://github.com/senhortiago/tcc_queda_acelerada",
+        "demo": null
+      },
+      "cover": {
+        "from": "#E9CB55",
+        "to": "#F6DD7A"
+      }
+    },
+    {
+      "id": "calc-one",
+      "title": "Calc One",
+      "summary": "Calculadora web em JavaScript.",
+      "description": "Uma das minhas primeiras aplicações: calculadora funcional feita com HTML, CSS e JavaScript puro.",
+      "year": 2022,
+      "role": "Front-end",
+      "tags": [
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
+      "links": {
+        "repository": "https://github.com/senhortiago/calculadora",
+        "demo": null
+      },
+      "cover": {
+        "from": "#3B3B4F",
+        "to": "#8A8AA8"
+      }
+    }
+  ]
+}
