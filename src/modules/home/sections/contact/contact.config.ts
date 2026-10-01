@@ -42,6 +42,13 @@ export const contactConfig: ContactConfig = {
   },
   statusRegion: 'contents',
   statusLink: 'underline underline-offset-2',
+  captcha: {
+    wrapper: 'flex flex-col gap-2 sm:col-span-2',
+    widget: 'min-h-[78px]',
+    error: 'text-sm font-medium text-brand-danger',
+    preloadMargin: '600px 0px 600px 0px',
+    compactMediaQuery: '(max-width: 400px)',
+  },
 
   fields: [
     {
@@ -104,10 +111,12 @@ export const contactConfig: ContactConfig = {
     success: 'Mensagem enviada! Obrigado pelo contato — respondo em breve.',
     error: 'Não consegui enviar agora. Tente de novo em instantes ou',
     errorLink: 'fale comigo no LinkedIn.',
+    captchaUnavailable: 'Não foi possível carregar a verificação anti-spam. Desative o bloqueador de anúncios ou',
     errors: {
       required: 'Campo obrigatório.',
       email: 'Informe um e-mail válido.',
       minlength: 'Escreva pelo menos 10 caracteres.',
+      captcha: 'Confirme que você não é um robô.',
     },
   },
 };

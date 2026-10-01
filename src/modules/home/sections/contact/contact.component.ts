@@ -1,4 +1,15 @@
-import { ChangeDetectionStrategy, Component, DestroyRef, inject, signal } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  DestroyRef,
+  ElementRef,
+  computed,
+  effect,
+  inject,
+  signal,
+  viewChild,
+} from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ButtonComponent } from '../../../../components/elements/button/button.component';
@@ -7,14 +18,16 @@ import { TextFieldComponent } from '../../../../components/elements/text-field/t
 import { anchorsConstant } from '../../../../core/constants/anchors.constant';
 import { featureFlagsConstant } from '../../../../core/constants/feature-flags.constant';
 import { linksConstant } from '../../../../core/constants/links.constant';
+import { InViewDirective } from '../../../../core/directives/in-view.directive';
 import { ContactApiService } from '../../../../core/services/contact-api/contact-api.service';
+import { RecaptchaService } from '../../../../core/services/recaptcha/recaptcha.service';
 import { contactConfig } from './contact.config';
-import { ContactFieldName, ContactStatus } from './contact.types';
+import { ContactCaptchaState, ContactFieldName, ContactStatus } from './contact.types';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [ReactiveFormsModule, ButtonComponent, CardComponent, TextFieldComponent],
+  imports: [ReactiveFormsModule, ButtonComponent, CardComponent, TextFieldComponent, InViewDirective],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <section [id]="anchors.contact" [class]="config.section">
@@ -83,6 +96,26 @@ import { ContactFieldName, ContactStatus } from './contact.types';
                     />
                   }
 
+                  <div [class]="config.captcha.wrapper">
+                    <div
+                      #captchaHost
+                      appInView
+                      [inViewThreshold]="0"
+                      [inViewRootMargin]="config.captcha.preloadMargin"
+                      [class]="config.captcha.widget"
+                    ></div>
+                    @if (captchaState() === 'unavailable') {
+                      <p [class]="config.captcha.error" role="alert">
+                        {{ config.texts.captchaUnavailable }}
+                        <a [href]="linkedinUrl" target="_blank" rel="noopener noreferrer" [class]="config.statusLink">
+                          {{ config.texts.errorLink }}
+                        </a>
+                      </p>
+                    } @else if (showCaptchaError()) {
+                      <p [class]="config.captcha.error" role="alert">{{ config.texts.errors.captcha }}</p>
+                    }
+                  </div>
+
                   <div aria-live="polite" [class]="config.statusRegion">
                     @if (status() === 'success') {
                       <p [class]="config.status.success" role="status">{{ config.texts.success }}</p>
@@ -119,8 +152,20 @@ export class ContactComponent {
   protected readonly flags = featureFlagsConstant;
   protected readonly linkedinUrl = linksConstant.social.find((social) => social.id === 'linkedin')?.url ?? null;
   protected readonly status = signal<ContactStatus>('idle');
+  protected readonly captchaState = signal<ContactCaptchaState>('idle');
+
+  private readonly captchaToken = signal<string | null>(null);
+  private readonly captchaAttempted = signal(false);
+  protected readonly showCaptchaError = computed(() => this.captchaAttempted() && this.captchaToken() === null);
+
+  private readonly captchaHost = viewChild<string, ElementRef<HTMLElement>>('captchaHost', { read: ElementRef });
+  private readonly captchaView = viewChild('captchaHost', { read: InViewDirective });
+  private captchaWidgetId: number | null = null;
+  private captchaRequested = false;
 
   private readonly contactApi = inject(ContactApiService);
+  private readonly recaptcha = inject(RecaptchaService);
+  private readonly document = inject(DOCUMENT);
   private readonly destroyRef = inject(DestroyRef);
 
   protected readonly form = new FormGroup({
@@ -132,6 +177,18 @@ export class ContactComponent {
       validators: [Validators.required, Validators.minLength(contactConfig.messageMinLength)],
     }),
   });
+
+  constructor() {
+    // O script do Google só é baixado quando o formulário se aproxima da viewport (não pesa no LCP).
+    effect(() => {
+      const host = this.captchaHost();
+      if (!host || !this.captchaView()?.isInView() || this.captchaRequested) {
+        return;
+      }
+      this.captchaRequested = true;
+      void this.renderCaptcha(host.nativeElement);
+    });
+  }
 
   protected errorFor(name: ContactFieldName): string | null {
     const control = this.form.controls[name];
@@ -155,16 +212,20 @@ export class ContactComponent {
     if (this.status() === 'sending') {
       return;
     }
-    if (this.form.invalid) {
+    const captchaToken = this.captchaToken();
+    this.captchaAttempted.set(true);
+    if (this.form.invalid || captchaToken === null) {
       this.form.markAllAsTouched();
       return;
     }
 
     this.status.set('sending');
     this.contactApi
-      .send(this.form.getRawValue())
+      .send({ ...this.form.getRawValue(), captchaToken })
       .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe((result) => {
+        // O token do reCAPTCHA é de uso único: sempre exige nova verificação.
+        this.resetCaptcha();
         if (result === 'sent') {
           this.status.set('success');
           this.form.reset();
@@ -172,5 +233,28 @@ export class ContactComponent {
           this.status.set('error');
         }
       });
+  }
+
+  private async renderCaptcha(container: HTMLElement): Promise<void> {
+    const compact = this.document.defaultView?.matchMedia(this.config.captcha.compactMediaQuery).matches ?? false;
+    try {
+      this.captchaWidgetId = await this.recaptcha.render(container, {
+        size: compact ? 'compact' : 'normal',
+        theme: 'light',
+        onToken: (token) => this.captchaToken.set(token),
+        onInvalidated: () => this.captchaToken.set(null),
+      });
+      this.captchaState.set('ready');
+    } catch {
+      this.captchaState.set('unavailable');
+    }
+  }
+
+  private resetCaptcha(): void {
+    this.captchaToken.set(null);
+    this.captchaAttempted.set(false);
+    if (this.captchaWidgetId !== null) {
+      this.recaptcha.reset(this.captchaWidgetId);
+    }
   }
 }

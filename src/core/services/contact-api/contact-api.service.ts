@@ -1,36 +1,36 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { Observable, catchError, map, of } from 'rxjs';
 import { apiConstant } from '../../constants/api.constant';
-import { ContactPayload, ContactResult, contactResponseSchema } from './contact-api.types';
+import { emailjsConstant } from '../../constants/emailjs.constant';
+import { ContactPayload, ContactResult, EmailjsSendRequest, contactResponseSchema } from './contact-api.types';
 
 @Injectable({ providedIn: 'root' })
 export class ContactApiService {
   private readonly http = inject(HttpClient);
 
   send(payload: ContactPayload): Observable<ContactResult> {
-    const headers = new HttpHeaders({
-      'Content-Type': 'application/json',
-      Accept: 'application/json',
-    });
-
-    const body = {
-      ...payload,
-      _subject: `Portfólio · nova mensagem de ${payload.name}`,
-      _template: 'table',
-      _captcha: 'false',
+    const body: EmailjsSendRequest = {
+      service_id: emailjsConstant.serviceId,
+      template_id: emailjsConstant.templateId,
+      user_id: emailjsConstant.publicKey,
+      template_params: {
+        name: payload.name,
+        email: payload.email,
+        phone: payload.phone,
+        message: payload.message,
+        'g-recaptcha-response': payload.captchaToken,
+      },
     };
 
-    return this.http.post<unknown>(apiConstant.contactUrl, body, { headers }).pipe(
-      map((response): ContactResult => {
-        const parsed = contactResponseSchema.safeParse(response);
-        if (!parsed.success) {
-          return 'failed';
-        }
-        const ok = parsed.data.success === true || parsed.data.success === 'true';
-        return ok ? 'sent' : 'rejected';
-      }),
-      catchError(() => of<ContactResult>('failed')),
+    return this.http.post(apiConstant.contactUrl, body, { responseType: 'text' }).pipe(
+      map((response): ContactResult => (contactResponseSchema.safeParse(response).success ? 'sent' : 'failed')),
+      // 4xx: EmailJS recusou (captcha inválido, credenciais, limite da conta). Demais: rede/timeout.
+      catchError((error: unknown) =>
+        of<ContactResult>(
+          error instanceof HttpErrorResponse && error.status >= 400 && error.status < 500 ? 'rejected' : 'failed',
+        ),
+      ),
     );
   }
 }

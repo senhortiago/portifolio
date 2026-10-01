@@ -1,5 +1,6 @@
 export type ContactStatus = 'idle' | 'sending' | 'success' | 'error';
 export type ContactFieldName = 'name' | 'email' | 'phone' | 'message';
+export type ContactCaptchaState = 'idle' | 'ready' | 'unavailable';
 
 export interface ContactFieldDefinition {
   name: ContactFieldName;
@@ -44,6 +45,15 @@ export interface ContactConfig {
   status: Record<Exclude<ContactStatus, 'idle' | 'sending'>, string>;
   statusRegion: string;
   statusLink: string;
+  captcha: {
+    wrapper: string;
+    widget: string;
+    error: string;
+    /** Distância antes da viewport em que o script do Google começa a carregar. */
+    preloadMargin: string;
+    /** Abaixo desta largura o widget usa o tamanho compacto (o normal tem 304px). */
+    compactMediaQuery: string;
+  };
 
   fields: ContactFieldDefinition[];
   messageMinLength: number;
@@ -65,10 +75,12 @@ export interface ContactConfig {
     success: string;
     error: string;
     errorLink: string;
+    captchaUnavailable: string;
     errors: {
       required: string;
       email: string;
       minlength: string;
+      captcha: string;
     };
   };
 }
