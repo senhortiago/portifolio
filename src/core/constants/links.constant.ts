@@ -31,12 +31,6 @@ export const linksConstant = {
       handle: '@tiagophydev',
       url: 'https://www.youtube.com/@tiagophydev',
     },
-    {
-      id: 'email',
-      label: 'Email',
-      handle: '@TiagoBarcelos',
-      url: 'mailto:tiagolealbarcelos@gmail.com',
-    },
   ] satisfies SocialLink[],
   resume: {
     url: 'cv/tiago-barcelos-cv.pdf',
